@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="print-block">    
     <div class="head-info">
       <div class="l">
         <div class="photo-cont">
@@ -27,7 +27,9 @@
           I work and live in the area of Prague, formerly lived and worked for about 10 years in Germany, England, Indonesia, United Arab Emirates and Israel.
         </div>
       </div>
-      <div class="r"></div>
+      <div class="r">
+        <canvas id="skillsCanvas" width="200" height="200"></canvas>
+      </div>
     </div>
 
     <!-- <div v-for="item in items" :key="item">{{item}}</div> -->
@@ -38,11 +40,21 @@
 import { Component, Vue } from "vue-property-decorator";
 import moment from "moment";
 import Chart from "chart.js";
+import { PieChart } from "./pie-chart";
 
 @Component({
   components: {}
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  public created() {
+    // debugger;
+  }
+
+  public mounted() {
+    const pieChart = new PieChart();
+    pieChart.init();
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -62,6 +74,37 @@ body {
 }
 
 $dark-blue: #29658a;
+
+.block {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.margin {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .text-block {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.print-block {
+  @extend .block;
+
+  min-height: 1414px;
+
+  page-break-after: always;
+
+  border-top: 1px dotted $dark-blue;
+  border-bottom: 1px dotted $dark-blue;
+
+  @media print {
+    border: 0;
+  }
+}
 
 .head-info {
   display: table;
@@ -92,6 +135,12 @@ $dark-blue: #29658a;
 
       // font-family: remachine;
     }
+
+    canvas {
+      // $size: 200px !important;
+      // width: $size;
+      // height: $size;
+    }
   }
 }
 
@@ -101,18 +150,21 @@ $dark-blue: #29658a;
 
   .l {
     display: table-cell;
+    text-align: left;
+    width: 50%;
+    vertical-align: top;
 
     h1 {
-
     }
 
     .info-block {
-
     }
   }
 
   .r {
     display: table-cell;
+    vertical-align: top;
+    width: 50%;
   }
 }
 
