@@ -1,0 +1,131 @@
+<div>
+    <div class="print-block">
+        <div class="head-info">
+            <div class="l">
+                <div class="photo-cont">
+                    <img src="./assets/profile-photo-small.png" />
+                </div>
+            </div>
+            <div class="r">
+                <div class="title-name">Václav Mikeska</div>
+                <div>Age 37, located in the area of Prague</div>
+            </div>
+        </div>
+
+        <div class="middle-tbl">
+            <div class="l">
+                <div class="first-page-title">Me</div>
+                <div class="info-block">{{texts.aboutMe}}</div>
+
+                <div class="first-page-title">My skills</div>
+                <div class="info-block">{{texts.skills}}</div>
+            </div>
+            <div class="r">
+                <canvas id="skillsCanvas" width="200" height="200"></canvas>
+            </div>
+        </div>
+
+        <div class="first-page-title">Technologies</div>
+
+        <div class="nums-explanation">Number indicates rounded amount of years I've worked with the appropriate
+            technology
+        </div>
+
+        <div class="techs-block-cont">
+            <div class="block-cont">
+                <h2>Fresh</h2>
+                <div class="block-desc">
+                    Technolgies I actively use and maintain expert knowledge level
+                </div>
+                <div class="techs-cont color1">
+                    <Tech v-for="item in techno1" :key="item.name" v-bind:name="item.name" v-bind:years="item.years">
+                    </Tech>
+                </div>
+            </div>
+
+            <div class="block-cont">
+                <h2>Past</h2>
+                <div class="block-desc">
+                    Technolgies I haven't use for a couple of years, but could get back on expert level within a couple
+                    of
+                    weeks
+                </div>
+                <div class="techs-cont color2">
+                    <Tech v-for="item in techno2" :key="item.name" v-bind:name="item.name" v-bind:years="item.years">
+                    </Tech>
+                </div>
+            </div>
+
+            <div class="block-cont">
+                <h2>Forgotten or new</h2>
+                <div class="block-desc">
+                    Technologies I used in distant past, or I keep elementary knowledge of them
+                </div>
+                <div class="techs-cont color3">
+                    <Tech v-for="item in techno3" :key="item.name" v-bind:name="item.name" v-bind:years="item.years">
+                    </Tech>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="print-block">
+
+        <h1>Companies</h1>
+
+        <div class="companies-cont">
+            <table>
+                <tr v-for="item in companies">
+                    <td>{{item.companyGroup.company}}</td>
+                    <td class="no-wrap">{{item.yearStart}} - {{item.yearEnd}}</td>
+                    <td>{{item.citiesStr}}</td>
+                    <td>{{item.companyGroup.contract}}</td>
+                    <td>
+                        <ul>
+                            <li v-for="comp in item.companies">{{comp}}</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <h1>Languages</h1>
+        <div class="langs-cont">
+            <table>
+                <tr v-for="item in languages">
+                    <td>{{item.name}}</td>
+                    <td>{{item.level}}</td>
+                    <td>{{item.desc}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="print-block">
+        <h1>Projects</h1>
+
+        <div class="projects-cont">
+            <div v-for="item in projects" class="project-cont">
+                <div class="top-line-tbl">
+                    <div class="l">
+                        <img v-bind:src="item.img" />
+                    </div>
+                    <div class="r">
+                        <div class="ptitle">{{item.proj.position}}, {{item.proj.company}}</div>
+                        <div class="other-row">
+                            <font-awesome-icon icon="calendar-alt" />
+                            {{item.proj.startMonth}}/{{item.proj.startYear}} -
+                            {{item.proj.endMonth}}/{{item.proj.endYear}}</div>
+                        <div class="other-row">
+                            <font-awesome-icon icon="map-marker-alt" />
+                            {{item.locs}}
+                        </div>
+                    </div>
+                </div>
+                <div class="desc">{{item.proj.description}}</div>
+            </div>
+        </div>
+    </div>
+
+</div>
