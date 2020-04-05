@@ -1,4 +1,5 @@
 import Chart from "chart.js";
+import { fields } from './data';
 
 export class PieChart {
 
@@ -45,23 +46,17 @@ export class PieChart {
         });
         const ctx = document.getElementById('skillsCanvas');
         const data = {
-            labels: [
-                "Backend development",
-                "Frontent development",
-                "Project management",
-                "Architecture",
-                "UX"
-            ],
+            labels: fields.map((f) => {
+                return f.name;
+            }),
             datasets: [
                 {
-                    data: [16, 8, 4, 8, 2],
-                    backgroundColor: [
-                        "#FF6384",
-                        "#36A2EB",
-                        "#FFCE56",
-                        "#57C2DB",
-                        "#4B966E",
-                    ],
+                    data: fields.map((f) => {
+                        return f.years;
+                    }),
+                    backgroundColor: fields.map((f) => {
+                        return f.color;
+                    }),
                 }]
         };
         const options = {

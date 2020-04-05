@@ -6,7 +6,7 @@ import moment from "moment";
 import Chart from "chart.js";
 import { PieChart } from "./pie-chart";
 import Tech from "./components/tech/tech.vue";
-import { texts, technos, companies, projects, languages } from "./data";
+import { technos, companies, projects, languages, fields } from "./data";
 import { CompanyView, ProjectView } from "./ints";
 import _ from "lodash";
 
@@ -29,10 +29,6 @@ export default class App extends Vue {
   public companies!: CompanyView[];
   public projects!: ProjectView[];
 
-  public get texts() {
-    return texts;
-  }
-
   public get techno1() {
     return technos.filter(i => {
       return i.knowledge === 1;
@@ -53,6 +49,10 @@ export default class App extends Vue {
 
   public get languages() {
     return languages;
+  }
+
+  public get fields() {
+    return fields;
   }
 
   private mapCompanies() {

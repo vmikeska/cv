@@ -1,13 +1,5 @@
-import { Project, Techno, CompanyGroup, Language } from './ints';
+import { Project, Techno, CompanyGroup, Language, FieldRecord } from './ints';
 
-export const texts = {
-    aboutMe: `I'm a professional software developer and consultant with over 25 years of total experience.
-                I do it as a hobby and passion and at least last 16 years for a living.
-                Besides that, I'm a father of one, an enthusiastic traveler and I do a lot of sports.`,
-    skills: `I'm a full-stack software developer, in recent years I work almost exclusively on frontend.
-            I work and live in the area of Prague, formerly lived and worked for about 10 years in Germany,
-            England, Indonesia, United Arab Emirates and Israel.`
-}
 
 export const technos: Techno[] = [
     {
@@ -122,7 +114,7 @@ export const projects: Project[] = [
 
         position: "Angular technical lead",
         locations: ["Prague"],
-        description: `Main architect of the Portfolio and Products SPA and technical lead of the team.`
+        description: `Architect and technical lead of Portfolio and Products SPA Angular based frontend.`
     },
     {
         startMonth: 5,
@@ -138,7 +130,7 @@ export const projects: Project[] = [
 
         position: "Senior Frontend Developer",
         locations: ["Frankfurt"],
-        description: `SPA application for gas and electricity market trading.`
+        description: `SPA Angular application for gas and electricity market trading.`
     },
     {
         startMonth: 9,
@@ -154,7 +146,7 @@ export const projects: Project[] = [
 
         position: "Founder",
         locations: ["Frankfurt"],
-        description: `Gloobster is a travel startup offering long term fly ticket search and a wide range of supportive social network features.`
+        description: `Travel startup offering long term fly ticket search and a wide range of supportive social network features.`
     },
     {
         startMonth: 1,
@@ -171,7 +163,7 @@ export const projects: Project[] = [
         position: "Senior Developer",
         locations: ["Darmstadt", "Tel Aviv"],
         description: `Mybitat is a joint venture of Samsung and AGT to Improve Ability of the Elderly to Live at Home Longer with Enhanced Quality of Life. 															
-                                        Our team was working on supporting tools for sensor collected data evaluation. I was working mostly on client development tasks.`
+                                        Our team was working on supporting tools for sensor collected data evaluation. I was working mostly on frontend development tasks.`
     },
     {
         startMonth: 9,
@@ -462,11 +454,39 @@ export const languages: Language[] = [
     {
         name: "German",
         level: "B2",
-        desc: "I use German couple of times a month. The level is not sufficient as an business language. Have future plans to improve."
+        desc: "I use the German language a couple of times a month. The level is not sufficient as a business language. I still plan to learn and improve."
     },
     {
         name: "Czech",
         level: "Mother tongue",
         desc: "Father's as well."
     },
+]
+
+export const fields: FieldRecord[] = [
+    {
+        name: "Backend development",
+        color: "#FF6384",
+        years: 17
+    },
+    {
+        name: "Frontent development",
+        color: "#36A2EB",
+        years: 20
+    },
+    {
+        name: "Project management",
+        color: "#FFCE56",
+        years: 4
+    },
+    {
+        name: "Architecture",
+        color: "#57C2DB",
+        years: 10
+    },
+    {
+        name: "UX",
+        color: "#4B966E",
+        years: 4
+    }    
 ]

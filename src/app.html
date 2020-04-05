@@ -15,10 +15,17 @@
         <div class="middle-tbl">
             <div class="l">
                 <div class="first-page-title">Me</div>
-                <div class="info-block">{{texts.aboutMe}}</div>
+                <div class="info-block">I'm a professional software developer and consultant with over 25 years of total
+                    experience and at least 19 years for a living.
+                    Besides that, I'm a father of one, an enthusiastic traveler and I do a lot of sports.</div>
 
                 <div class="first-page-title">My skills</div>
-                <div class="info-block">{{texts.skills}}</div>
+                <div class="info-block">My roles were mostly bound to the software development field, besides that, I
+                    was engaged in project management,
+                    architecture design, UX, research, CI and automation generally. Although I'm a full-stack software
+                    developer, in recent years I work
+                    almost exclusively on frontend. I work and live in the area of Prague, formerly lived and worked for
+                    about 10 years in Germany, England, Indonesia, United Arab Emirates and Israel.</div>
             </div>
             <div class="r">
                 <canvas id="skillsCanvas" width="200" height="200"></canvas>
@@ -27,9 +34,6 @@
 
         <div class="first-page-title">Technologies</div>
 
-        <div class="nums-explanation">Number indicates rounded amount of years I've worked with the appropriate
-            technology
-        </div>
 
         <div class="techs-block-cont">
             <div class="block-cont">
@@ -67,6 +71,9 @@
                 </div>
             </div>
         </div>
+        <div class="nums-explanation">* Number indicates rounded amount of years I've worked with the appropriate
+            technology
+        </div>
 
     </div>
 
@@ -90,16 +97,6 @@
             </table>
         </div>
 
-        <h1>Languages</h1>
-        <div class="langs-cont">
-            <table>
-                <tr v-for="item in languages">
-                    <td>{{item.name}}</td>
-                    <td>{{item.level}}</td>
-                    <td>{{item.desc}}</td>
-                </tr>
-            </table>
-        </div>
     </div>
 
     <div class="print-block">
@@ -125,6 +122,19 @@
                 </div>
                 <div class="desc">{{item.proj.description}}</div>
             </div>
+        </div>
+    </div>
+
+    <div class="print-block">
+        <h1>Languages</h1>
+        <div class="langs-cont">
+            <table>
+                <tr v-for="item in languages">
+                    <td>{{item.name}}</td>
+                    <td>{{item.level}}</td>
+                    <td>{{item.desc}}</td>
+                </tr>
+            </table>
         </div>
     </div>
 

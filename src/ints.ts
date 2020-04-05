@@ -48,3 +48,9 @@ export interface Language {
     level: string;
     desc: string;
 }
+
+export interface FieldRecord {
+    name: string;
+    color: string;
+    years: number;
+}
