@@ -465,12 +465,12 @@ export const languages: Language[] = [
 
 export const fields: FieldRecord[] = [
     {
-        name: "Backend development",
+        name: "Backend",
         color: "#FF6384",
         years: 17
     },
     {
-        name: "Frontent development",
+        name: "Frontent",
         color: "#36A2EB",
         years: 20
     },
