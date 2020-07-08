@@ -103,7 +103,7 @@ export const projects: Project[] = [
     {
         startMonth: 12,
         startYear: 2017,
-        endMonth: 4,
+        endMonth: (new Date).getMonth() + 1,
         endYear: 2020,
 
         projectGroup: "FJ4",

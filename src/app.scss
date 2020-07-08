@@ -367,13 +367,13 @@ $darkest-blue: #004A7F;
 
 .projects-cont {
     padding-left: 1rem;
-    padding-right: 1rem;
-    page-break-inside: avoid;
+    padding-right: 1rem;    
 
     .project-cont {
         border-bottom: 1px solid black;
         text-align: left;
         margin-bottom: 1rem;
+        page-break-inside: avoid;
 
         .top-line-tbl {
             display: table;
