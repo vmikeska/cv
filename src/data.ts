@@ -488,5 +488,10 @@ export const fields: FieldRecord[] = [
         name: "UX",
         color: "#4B966E",
         years: 4
+    },
+    {
+        name: "CI & Automation",
+        color: "#51495e",
+        years: 2
     }    
 ]
