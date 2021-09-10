@@ -104,7 +104,7 @@ export const projects: Project[] = [
         startMonth: 12,
         startYear: 2017,
         endMonth: (new Date).getMonth() + 1,
-        endYear: 2020,
+        endYear: 2021,
 
         projectGroup: "FJ4",
 
@@ -470,7 +470,7 @@ export const fields: FieldRecord[] = [
         years: 17
     },
     {
-        name: "Frontent",
+        name: "Frontend",
         color: "#36A2EB",
         years: 20
     },
